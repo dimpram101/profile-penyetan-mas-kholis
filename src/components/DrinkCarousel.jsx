@@ -16,22 +16,20 @@ const responsive = {
   },
 };
 
-const FoodCarousel = () => {
+const DrinkCarousel = () => {
   const items = [
-    { src: "/menu.png", title: "Ayam Penyet" },
-    { src: "/menu.png", title: "Nasi Goreng" },
-    { src: "/menu.png", title: "Mie Ayam" },
-    { src: "/menu.png", title: "Sate Ayam" },
-    { src: "/menu.png", title: "Bakso" },
-    { src: "/menu.png", title: "Gado Gado" },
-    { src: "/menu.png", title: "Soto Ayam" },
-    { src: "/menu.png", title: "Rendang" },
-    { src: "/menu.png", title: "Rendang" },
+    {src: "/menu.png", title: "Es Teh"},
+    {src: "/menu.png", title: "Es Jeruk"},
+    {src: "/menu.png", title: "Es Campur"},
+    {src: "/menu.png", title: "Es Doger"},
+    {src: "/menu.png", title: "Es Teler"},
+    {src: "/menu.png", title: "Es Kelapa Muda"},
+    {src: "/menu.png", title: "Es Cincau"},
   ];
 
   return (
     <div className="mt-4">
-      {/* FoodCarousel */}
+      {/* DrinkCarousel */}
       <Carousel
         responsive={responsive}
       >
@@ -46,4 +44,4 @@ const FoodCarousel = () => {
   );
 };
 
-export default FoodCarousel;
+export default DrinkCarousel;

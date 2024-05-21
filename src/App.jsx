@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import FoodCarousel from "./components/FoodCarousel";
+import DrinkCarousel from "./components/DrinkCarousel";
+import Location from "./components/Location";
 
 function App() {
   const [foodTab, setFoodTab] = useState("Food");
@@ -182,7 +184,7 @@ function App() {
         <div className="flex flex-col items-center justify-center max-w-8xl mx-auto w-full h-full gap-8">
           <div className="w-full">
             <p className="text-center text-5xl font-bold">Our Food Menu</p>
-            <p className="text-center text-lg">
+            <p className="text-center text-lg mt-2">
               Kami menyediakan makanan paling menarik dan enak yang akan kalian
               rasakan!
             </p>
@@ -204,9 +206,108 @@ function App() {
                 </div>
               ))}
             </div>
-            
-            <FoodCarousel/>
+            <div className="w-full border-t-2">
+              <FoodCarousel />
+            </div>
           </div>
+        </div>
+      </div>
+
+      {/* Drink Menu */}
+      <div
+        id="menu"
+        className="w-full h-screen text-black flex items-center font-inter mx-auto relative overflow-hidden"
+      >
+        <div className="flex flex-col items-center justify-center max-w-8xl mx-auto w-full h-full gap-8">
+          <div className="w-full">
+            <p className="text-center text-5xl font-bold">Our Drink Menu</p>
+            <p className="text-center text-lg mt-2">
+              Kami menyediakan berbagai minuman segar untukmu!
+            </p>
+          </div>
+          {/* Section Tab */}
+          <div className="w-full">
+            <div className="flex justify-center space-x-4">
+              <div
+                className={`cursor-pointer py-4 px-6 border-b-2 border-b-[#195A00] text-[#195A00]`}
+              >
+                Drink
+              </div>
+            </div>
+            <div className="w-full border-t-2">
+              <DrinkCarousel />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* About Us */}
+      <div
+        id="why-us"
+        className="w-full h-screen text-black flex items-center font-inter mx-auto relative overflow-hidden bg-[#FAF7F2]"
+      >
+        <div className="flex flex-row items-center justify-between max-w-8xl mx-auto w-full h-full gap-12">
+          <img src="/aboutus.png" />
+          <div className="flex flex-col justify-center items-start">
+            <p className="text-2xl text-[#195A00] font-miniver">
+              About Us
+              <span className="ml-2 w-12 h-8 border-b border-b-[#195A00] inline-block"></span>
+            </p>
+            <div className="space-y-3 mt-3">
+              <p className="text-5xl font-roboto font-semibold leading-tight">
+                Food is an important part Of a Daily Energy !
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                diam pellentesque bibendum non dui volutpat fringilla bibendum.
+                Urna, elit augue urna, vitae feugiat pretium donec id elementum.
+                Ultrices mattis vitae mus risus. Lacus nisi, et ac dapibus sit
+                eu velit in consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Lokasi */}
+      <Location />
+
+      {/* Contact Us */}
+      <div
+        id="contact-us"
+        className="w-full h-[35vh] text-black flex items-center font-inter mx-auto relative overflow-hidden "
+      >
+        <div className="flex flex-col items-center justify-center max-w-8xl mx-auto w-full h-full gap-12">
+          <p className="text-3xl font-intel font-semibold">Contact Us!</p>
+          <div className="flex w-full justify-between items-center">
+            <img src="/image 80.png" className="w-80" />
+            <img src="/image 81.png" className="w-40" />
+            <img src="/image 82.png" className="w-80" />
+            <img src="/image 83.png" className="w-80" />
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <div
+        id="contact-us"
+        className="w-full h-[35vh] bg-[#A8BCA1] bg-opacity-30 text-black flex flex-col font-inter mx-auto relative overflow-hidden "
+      >
+        <div className="h-full w-full max-w-8xl mx-auto flex items-center justify-between">
+          <p className="text-4xl font-bold">LOGO</p>
+
+          <div className="flex flex-col gap-2">
+            <p className="font-bold">Contact Us</p>
+            <p>Balikpapan</p>
+            <p>01347839498</p>
+            <p>mail@gmail.com</p>
+            <p>Mon - Sat / 10.00 AM - 10.00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-20 bg-[#195A00]">
+        <div className="max-w-8xl h-full mx-auto flex items-center">
+          <p className="text-white text-left">Copyright © 2024. All rights reserved - Raise Production</p>
         </div>
       </div>
     </div>
